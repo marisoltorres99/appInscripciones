@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DER" id="der-v3">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Institucion -->
+        <mxCell id="inst" value="&lt;b&gt;Institucion&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;nombre&lt;br&gt;direccion&lt;br&gt;telefono&lt;br&gt;email&lt;br&gt;activo" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="220" height="142" as="geometry" />
+        </mxCell>
+
+        <!-- Usuario -->
+        <mxCell id="usr" value="&lt;b&gt;Usuario&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;email&lt;br&gt;password&lt;br&gt;rol&lt;br&gt;institucion_id (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="220" height="124" as="geometry" />
+        </mxCell>
+
+        <!-- Alumno -->
+        <mxCell id="alu" value="&lt;b&gt;Alumno&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;usuario_id (FK)&lt;br&gt;nombre&lt;br&gt;apellido&lt;br&gt;dni&lt;br&gt;telefono&lt;br&gt;direccion&lt;br&gt;institucion_id (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="220" height="178" as="geometry" />
+        </mxCell>
+
+        <!-- Profesor -->
+        <mxCell id="prof" value="&lt;b&gt;Profesor&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;nombre&lt;br&gt;apellido&lt;br&gt;dni&lt;br&gt;email&lt;br&gt;activo&lt;br&gt;institucion_id (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="220" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- ClaseProfesor -->
+        <mxCell id="cp" value="&lt;b&gt;ClaseProfesor&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;profesor_id (FK)&lt;br&gt;clase_id (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="280" width="220" height="88" as="geometry" />
+        </mxCell>
+
+        <!-- Curso -->
+        <mxCell id="curso" value="&lt;b&gt;Curso&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;nombre&lt;br&gt;descripcion&lt;br&gt;duracion&lt;br&gt;activo&lt;br&gt;institucion_id (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="280" width="220" height="142" as="geometry" />
+        </mxCell>
+
+        <!-- Clase -->
+        <mxCell id="clase" value="&lt;b&gt;Clase&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;curso_id (FK)&lt;br&gt;cupo&lt;br&gt;aula&lt;br&gt;fecha_inicio&lt;br&gt;fecha_fin&lt;br&gt;activo" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="220" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Horario -->
+        <mxCell id="horario" value="&lt;b&gt;Horario&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;clase_id (FK)&lt;br&gt;dia_semana&lt;br&gt;hora_inicio&lt;br&gt;hora_fin" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="520" width="220" height="124" as="geometry" />
+        </mxCell>
+
+        <!-- Inscripcion -->
+        <mxCell id="insc" value="&lt;b&gt;Inscripcion&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;alumno_id (FK)&lt;br&gt;clase_id (FK)&lt;br&gt;fecha&lt;br&gt;estado" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="520" width="220" height="124" as="geometry" />
+        </mxCell>
+
+        <!-- Precio -->
+        <mxCell id="precio" value="&lt;b&gt;Precio&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;curso_id (FK)&lt;br&gt;monto&lt;br&gt;fecha_desde&lt;br&gt;fecha_hasta" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="760" width="220" height="124" as="geometry" />
+        </mxCell>
+
+        <!-- Pago -->
+        <mxCell id="pago" value="&lt;b&gt;Pago&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PK &lt;b&gt;Id&lt;/b&gt;&lt;br&gt;inscripcion_id (FK)&lt;br&gt;fecha&lt;br&gt;importe&lt;br&gt;medio&lt;br&gt;estado" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="760" width="220" height="142" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="inst" target="usr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="inst" target="alu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="inst" target="prof">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="inst" target="curso">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="1:1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="usr" target="alu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="curso" target="clase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="curso" target="precio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="clase" target="horario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="clase" target="insc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="clase" target="cp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="prof" target="cp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="alu" target="insc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" edge="1" parent="1" source="insc" target="pago">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
